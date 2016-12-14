@@ -79,3 +79,7 @@ Finally we see where `legs` comes in to give our table some "structure" (excuse 
 PASS
 ok  	github.com/georgemac/legs/example	0.005s
 ```
+
+## License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
