@@ -45,7 +45,7 @@ Now we have the implementations of Name and Run. Here we dynamically generate a 
 
 ```go
 func TestFib(t *testing.T) {
-	legs.Table([]legs.Case{
+	legs.Table{
 		newCase(1, 1),
 		newCase(2, 1),
 		newCase(3, 2),
@@ -53,11 +53,11 @@ func TestFib(t *testing.T) {
 		newCase(5, 5),
 		newCase(6, 8),
 		newCase(7, 13),
-	}).Run(t)
+	}.Run(t)
 }
 ```
 
-Finally we see where `legs` comes in to give our table some "structure" (excuse the punny name). A slice of `legs.Case` is a `legs.Table`, which happens to also implements `legs.Runner`. We can convert this case slice in to a table and execute using the provided testing.T pointer. This generates the following output when run using `go test -v` in the example folder:
+Finally we see where `legs` comes in to give our table some "structure" (excuse the punny name). A slice of `legs.Case` is a `legs.Table`, which happens to also implements `legs.Runner`. We can execute this table using the provided testing.T pointer on a call to Run. This generates the following output when run using `go test -v` in the example folder:
 
 ```
 === RUN   TestFib

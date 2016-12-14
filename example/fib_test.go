@@ -26,7 +26,7 @@ func (tt *testCase) Run(t *testing.T) {
 }
 
 func TestFib(t *testing.T) {
-	legs.Table([]legs.Case{
+	legs.Table{
 		newCase(1, 1),
 		newCase(2, 1),
 		newCase(3, 2),
@@ -34,5 +34,5 @@ func TestFib(t *testing.T) {
 		newCase(5, 5),
 		newCase(6, 8),
 		newCase(7, 13),
-	}).Run(t)
+	}.Run(t)
 }
