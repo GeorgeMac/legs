@@ -46,13 +46,13 @@ Now we have the implementations of Name and Run. Here we dynamically generate a 
 ```go
 func TestFib(t *testing.T) {
 	legs.Table{
-		newCase(1, 1),
-		newCase(2, 1),
-		newCase(3, 2),
-		newCase(4, 3),
-		newCase(5, 5),
-		newCase(6, 8),
-		newCase(7, 13),
+		&testCase{1, 1},
+		&testCase{2, 1},
+		&testCase{3, 2},
+		&testCase{4, 3},
+		&testCase{5, 5},
+		&testCase{6, 8},
+		&testCase{7, 13},
 	}.Run(t)
 }
 ```
